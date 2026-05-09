@@ -1,0 +1,25 @@
+# Raw / intermediate artifacts (per-project convention)
+**/raw_do_not_track/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+
+# Notebook scratch / large data
+*.pkl
+*.npz
+*.parquet
