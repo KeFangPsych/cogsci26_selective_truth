@@ -164,5 +164,4 @@ submission (citation key TBD).
 
 ## License
 
-(Add your preferred license here — e.g. CC BY 4.0 for the materials,
-MIT for the code.)
+CC BY 4.0 for the data and MIT for the code.
