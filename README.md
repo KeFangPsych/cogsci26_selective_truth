@@ -109,4 +109,4 @@ paper (citation TBD).
 
 ## License
 
-To be determined — likely CC BY 4.0 for the data and MIT for the code.
+CC BY 4.0 for the data and MIT for the code.
