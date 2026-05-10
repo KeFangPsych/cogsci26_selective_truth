@@ -193,6 +193,4 @@ If you use this dataset or pipeline, please cite the accompanying CogSci
 2026 submission (citation key TBD).
 
 ## License
-
-(Add your preferred license here — e.g. CC BY 4.0 for the data and MIT
-for the code.)
+CC BY 4.0 for the data and MIT for the code.
