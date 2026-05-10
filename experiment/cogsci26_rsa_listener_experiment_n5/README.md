@@ -98,7 +98,7 @@ URL automatically — no further wiring needed.
 ### 3. Local testing (optional)
 
 ```bash
-cd web/cogsci26_rsa_listener_experiment_n5_o1
+cd experiment/cogsci26_rsa_listener_experiment_n5
 python -m http.server 8000
 # then open http://localhost:8000 in a browser
 ```

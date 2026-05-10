@@ -2,7 +2,7 @@
 
 This directory holds the **public-facing data artifact and analysis
 pipeline** for the speaker experiment at
-[`web/cogsci26_rsa_speaker_experiment_n5/`](../../web/cogsci26_rsa_speaker_experiment_n5/).
+[`experiment/cogsci26_rsa_speaker_experiment_n5/`](../../experiment/cogsci26_rsa_speaker_experiment_n5/).
 
 It does two things:
 
@@ -50,7 +50,7 @@ straight to "Schema" below.
 ### Inputs you need
 
 The raw data is the per-subject CSV that DataPipe produces from the
-running experiment ([`web/cogsci26_rsa_speaker_experiment_n5/`](../../web/cogsci26_rsa_speaker_experiment_n5/)).
+running experiment ([`experiment/cogsci26_rsa_speaker_experiment_n5/`](../../experiment/cogsci26_rsa_speaker_experiment_n5/)).
 For this dataset the pilot and main studies were collected separately;
 drop them into:
 
@@ -150,13 +150,13 @@ The `_alpha` column may therefore be a float or the literal string
 
 The world here (n=1, m=5, 8-utterance vocabulary) is identical to the
 simulation pipeline at
-[`models/simulations/`](../../models/simulations/). The seven fitted
+[`model/`](../../model/). The seven fitted
 speaker models are a strict subset of the speakers produced by Stage 2
 of that pipeline — `inf_F`, `persp_F`, `persm_F` correspond exactly to
 its `update_internal=False` agents.
 
 The vendored `rsa_optimal_exp_core.py` is an earlier sibling of
-`models/simulations/rsa_core.py` (no level-2+ speakers; uses the global
+`model/rsa_core.py` (no level-2+ speakers; uses the global
 `np.random` for any sampling, but model fitting only computes
 log-likelihoods, so the RNG-threading work in the simulation pipeline is
 not relevant here).

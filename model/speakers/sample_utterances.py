@@ -70,7 +70,7 @@ import pandas as pd
 import xarray as xr
 from joblib import Parallel, delayed
 
-from models.simulations.rsa_core import World, create_speaker
+from model.rsa_core import World, create_speaker
 
 
 _REQUIRED_KEYS = ("speaker", "n_utt_seq")

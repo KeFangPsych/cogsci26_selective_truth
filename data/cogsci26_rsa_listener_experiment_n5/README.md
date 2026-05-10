@@ -2,7 +2,7 @@
 
 This directory holds the **public-facing data artifact and analysis pipeline**
 for the listener experiment at
-[`web/cogsci26_rsa_listener_experiment_n5_o1/`](../../web/cogsci26_rsa_listener_experiment_n5_o1/).
+[`experiment/cogsci26_rsa_listener_experiment_n5/`](../../experiment/cogsci26_rsa_listener_experiment_n5/).
 
 It contains everything needed to reproduce the two listener-model analyses
 reported in the paper:
@@ -32,7 +32,7 @@ cogsci_rsa_listener_experiment_n5_o1/
 
 ## What the pipeline does
 
-The listener experiment ([`web/cogsci26_rsa_listener_experiment_n5_o1/`](../../web/cogsci26_rsa_listener_experiment_n5_o1/))
+The listener experiment ([`experiment/cogsci26_rsa_listener_experiment_n5/`](../../experiment/cogsci26_rsa_listener_experiment_n5/))
 is between-subjects: each participant lands in one of 24 cells (3 belief
 conditions × 3 utterance scripts × {1–3} sequence variants), gets a 5-round
 sequence of utterances about a clinical-trial outcome, and rates how
@@ -128,7 +128,7 @@ place:
 ## Connection to other parts of the repo
 
 - World identical to the simulation pipeline at
-  [`models/simulations/`](../../models/simulations/) (`n=1`, `m=5`,
+  [`model/`](../../model/) (`n=1`, `m=5`,
   21-point θ grid, 8-utterance vocabulary).
 - Listener model class names in the paper map to (`omega`,
   `update_internal`) settings of `PragmaticListener_obs_n` from
@@ -144,7 +144,7 @@ All listener fits in this directory use **`_F` (update_internal=False)** as
 the canonical model — internal speaker models stay frozen at their priors
 across the 5-round trial. This matches the convention used throughout the
 simulation pipeline (e.g., agent directory names like `vigilant_L1strat_a3_uiF`
-in `models/simulations/simulation_experiments/`).
+in `model/simulation_experiments/`).
 
 ## Cleanup notes (vs. live source)
 

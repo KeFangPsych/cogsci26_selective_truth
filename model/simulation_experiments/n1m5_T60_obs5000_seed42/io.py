@@ -41,7 +41,7 @@ import numpy as np
 import pandas as pd
 import xarray as xr
 
-from models.simulations.rsa_core import World
+from model.rsa_core import World
 
 
 # =============================================================================

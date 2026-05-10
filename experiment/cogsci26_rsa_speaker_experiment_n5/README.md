@@ -51,7 +51,7 @@ three identifiers.
 You can run the experiment locally without Prolific or DataPipe:
 
 ```bash
-cd web/cogsci26_rsa_speaker_experiment_n5
+cd experiment/cogsci26_rsa_speaker_experiment_n5
 python -m http.server 8000
 # then open http://localhost:8000 in a browser
 ```

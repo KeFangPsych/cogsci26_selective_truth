@@ -59,7 +59,7 @@ import xarray as xr
 from joblib import Parallel, delayed
 from scipy.special import logsumexp
 
-from models.simulations.rsa_core import (
+from model.rsa_core import (
     World, LiteralListener, PragmaticListener_obs_n, create_listener,
 )
 

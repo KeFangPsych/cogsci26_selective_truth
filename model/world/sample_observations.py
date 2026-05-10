@@ -31,7 +31,7 @@ from typing import Any, Dict, Tuple
 import numpy as np
 import pandas as pd
 
-from models.simulations.rsa_core import World
+from model.rsa_core import World
 
 
 _REQUIRED_KEYS = ("world", "thetas", "n_obs_seq", "T")

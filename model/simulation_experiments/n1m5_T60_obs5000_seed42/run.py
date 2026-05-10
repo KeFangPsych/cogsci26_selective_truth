@@ -6,7 +6,7 @@ Output
 Sits next to this script in a `raw_do_not_track/` subdirectory so the
 experiment's code and data live side-by-side:
 
-    models/simulations/simulation_experiments/n1m5_T60_obs5000_seed42/
+    model/simulation_experiments/n1m5_T60_obs5000_seed42/
         run.py, io.py, ...
         raw_do_not_track/                  # gitignored via the project pattern
             meta.json
@@ -28,8 +28,8 @@ from disk for downstream stages). Pass --overwrite to redo everything.
 
 Usage
 -----
-    python models/simulations/simulation_experiments/n1m5_T60_obs5000_seed42/run.py
-    python models/simulations/simulation_experiments/n1m5_T60_obs5000_seed42/run.py --overwrite
+    python model/simulation_experiments/n1m5_T60_obs5000_seed42/run.py
+    python model/simulation_experiments/n1m5_T60_obs5000_seed42/run.py --overwrite
 """
 from __future__ import annotations
 
@@ -37,21 +37,21 @@ import sys
 import time
 from pathlib import Path
 
-# --- repo-root bootstrap so `from models.simulations...` works from any cwd ---
+# --- repo-root bootstrap so `from model...` works from any cwd ---
 THIS_FILE = Path(__file__).resolve()
-# run.py -> n1m5.../ -> simulation_experiments/ -> simulations/ -> models/ -> repo root
-REPO_ROOT = THIS_FILE.parents[4]
+# run.py -> n1m5.../ -> simulation_experiments/ -> model/ -> repo root
+REPO_ROOT = THIS_FILE.parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 import numpy as np  # noqa: E402
 
-from models.simulations.world.sample_observations import sample_observations  # noqa: E402
-from models.simulations.speakers.sample_utterances import sample_utterances  # noqa: E402
-from models.simulations.listeners.compute_beliefs import compute_listener_beliefs  # noqa: E402
+from model.world.sample_observations import sample_observations  # noqa: E402
+from model.speakers.sample_utterances import sample_utterances  # noqa: E402
+from model.listeners.compute_beliefs import compute_listener_beliefs  # noqa: E402
 
 # I/O helpers vendored alongside this experiment (see io.py docstring).
-from models.simulations.simulation_experiments.n1m5_T60_obs5000_seed42.io import (  # noqa: E402
+from model.simulation_experiments.n1m5_T60_obs5000_seed42.io import (  # noqa: E402
     save_observations,
     load_observations,
     save_utterances,
